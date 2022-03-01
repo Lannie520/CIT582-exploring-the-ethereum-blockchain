@@ -61,20 +61,20 @@ def get_most_expensive_transaction(block_num):
     return max_tx
 
 
-cost = get_transaction_cost(0x0dda1142828634746a8e49e707fddebd487355a172bfa94b906a151062299578)
-print(cost*(pow(10, -18))*1385.02)
+#cost = get_transaction_cost(0x0dda1142828634746a8e49e707fddebd487355a172bfa94b906a151062299578)
+#print(cost*(pow(10, -18))*1385.02)
 
-block_fee = []
-for block in range(10237100, 10237109+1):
-    block_fee.append(get_block_cost(block))
+#block_fee = []
+#for block in range(10237100, 10237109+1):
+    #block_fee.append(get_block_cost(block))
 
-average = (sum(block_fee)/len(block_fee))
-print(average * pow(10, -18))
+#average = (sum(block_fee)/len(block_fee))
+#print(average * pow(10, -18))
 
-one_cost = get_block_cost(10237208)
-print(one_cost * pow(10, -18) * 248.26 + (2 * 248.26))
+#one_cost = get_block_cost(10237208)
+#print(one_cost * pow(10, -18) * 248.26 + (2 * 248.26))
 
-expensive = get_most_expensive_transaction(10237208)
-print(binascii.hexlify(expensive))
+#expensive = get_most_expensive_transaction(10237208)
+#print(binascii.hexlify(expensive))
 
 
